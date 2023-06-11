@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -35,9 +37,12 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - ScreenOverlay
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Screen Overlay
+    uniqueID: 81197649
     locked: 0
