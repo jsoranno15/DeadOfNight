@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
         {
             // Flip the player sprite if moving in the opposite direction
             if (moveX < 0)
-                transform.localScale = new Vector3(-5, 5, 1);
+                transform.localScale = new Vector3(-7, 7, 1);
             else if (moveX > 0)
-                transform.localScale = new Vector3(5, 5, 1);
+                transform.localScale = new Vector3(7, 7, 1);
 
             // Jumping
             if (Input.GetButtonDown("Jump") && isJumping == false )
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the player is touching the ground
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") ||  collision.gameObject.CompareTag("Enemy"))
             isJumping = false;
     }
 
